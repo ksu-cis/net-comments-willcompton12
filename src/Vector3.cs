@@ -37,15 +37,26 @@ namespace VectorMath
         /// <summary>
         /// Constructs a new instance of Vector3 with
         /// the supplied values for X, Y, and Z.
-        /// <param name="X">A double precision number for the x component of the vector.</param>
-        /// <param name="Y">A double precision number for the y component of the vector.</param>
-        /// <param name="Z">A double precision number for the z component of the vector.</param>
-        /// </summary>
+        ///  </summary>
+        /// <param name="x">A double precision number for the x component of the vector.</param>
+        /// <param name="y">A double precision number for the y component of the vector.</param>
+        /// <param name="z">A double precision number for the z component of the vector.</param>
         public Vector3(double x, double y, double z)
         {
             this.X = x;
             this.Y = y;
             this.Z = z;
+        }
+        /// <summary>
+        /// Add the other vector into this vector.
+        /// </summary>
+        /// <param name="other">The vector to add into this one.</param>
+        public void Add(Vector3 other)
+        {
+            this.X += other.X;
+            this.Y += other.Y;
+            this.Z += other.Z;
+
         }
     }
 }
